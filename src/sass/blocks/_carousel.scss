@@ -1,0 +1,42 @@
+.carousel {
+    padding: 81px 0;
+    &__inner {
+        position: relative;
+        width: 750px;
+        margin: 0 auto;
+        img {
+            max-width: 100%;
+        }
+    }
+    
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left:-66px;
+        border: none;
+        background: #fff;
+        img {
+            width: 31px;
+            height: 50px;
+        }
+    }
+    .next {
+        left: auto;
+        right:-66px;
+    }
+    .tns-item {
+        img{
+            display: block;
+            margin: 0 auto; 
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .carousel {
+        .prev, .next {
+            display: none;
+        }  
+    }
+}
