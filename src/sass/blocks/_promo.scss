@@ -24,7 +24,7 @@
         margin-top: 17px;      
     }
     &__icons {
-        width: 425px;
+        max-width: 425px;
         margin-top: 65px;
         display: flex;
         justify-content: space-between;
@@ -77,10 +77,17 @@
             margin-top: 15px;      
         }
         &__icons {
-            width: 380px;
             margin-top: 40px;
         }
     }
+
+@media (max-width: 650px) {
+    .promo {
+        &__header {
+            font-size: 25px;
+        }
+    }
+}
     
 }
 
