@@ -14,7 +14,8 @@
         transform: translateX(-50%);
         max-width: 460px;
         height: 270px;
-        background: $main-color;  
+        background: $main-color; 
+        opacity: 0.7; 
         text-align: center;
         line-height: 20px;
         padding: 50px 68px 60px 68px;
@@ -27,7 +28,7 @@
     }
     &__phone {
         display: block;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 700;
         color: #fff;
         margin-bottom: 36px;

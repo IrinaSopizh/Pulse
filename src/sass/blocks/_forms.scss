@@ -22,13 +22,3 @@
     }
 }
 
-@media (max-width: 768px) {
-    .feed-form {
-        margin: 0 auto;
-        input {
-            &:nth-child(1) {
-                margin-top: 30px;
-            }
-        }
-    }   
-}

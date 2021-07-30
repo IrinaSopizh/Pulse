@@ -71,30 +71,28 @@ $(document).ready(function(){
           required: "Пожалуйста введите свою почту!",
           email: "Ваш адрес электронной почты должен быть в формате name@domain.com"
         }
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "mailer/smart.php",
+          data: $(form).serialize()
+        }).done(function() {
+          $(form).find('input').val("");
+          $('#consultation, #order').fadeOut();
+          $('.overlay, #thanks').fadeIn('slow');
+    
+          $('form').trigger('reset');
+        });
       } 
     });   
   }
 
-  validForm('#consultation-form');
-  validForm('#consultation form');
-  validForm('#order form');
-
-  $('input[name=phone]').mask("+7 (999) 999-9999");
+  $('input[name=phone]').mask("+3 (999) 999-9999");
 
   $('form').submit(function(e) {
     e.preventDefault();
-    $.ajax({
-      type: "POST",
-      url: "/mailer/smart.php",
-      data: $(this).serialize()
-    }).done(function() {
-      $(this).find('input').val("");
-      $('#consultation, #order').fadeOut();
-      $('.overlay, #thanks').fadeIn('slow');
-
-      $('form').trigger('reset');
-    });
-    return false;
+    validForm(this.id);  
   });
 
   //Smooth scrol and page up

@@ -1,5 +1,5 @@
 .promo {
-    min-height: 650px;
+    min-height: 100vh;
     padding: 21px 0 95px 0;
     background: url(../../img/main.jpg) center (center/cover) no-repeat;
     &__wrapper {
@@ -54,40 +54,7 @@
     }
 }
 
-@media (max-width: 992px) {
-    .promo {
-       padding-left: 15px;
-       padding-right: 15px;
-    }
-}
 
-@media (max-width: 650px) {
-    .promo {
-        &__wrapper {
-            align-items: center;
-            margin-top: 60px;
-        }
-        &__header {
-            font-size: 30px;
-            line-height: 30px;
-        }
-        &__subheader {
-            line-height: 15px;
-            font-size: 15px;
-            margin-top: 15px;      
-        }
-        &__icons {
-            margin-top: 40px;
-        }
-    }
-
-@media (max-width: 650px) {
-    .promo {
-        &__header {
-            font-size: 25px;
-        }
-    }
-}
     
-}
+
 
